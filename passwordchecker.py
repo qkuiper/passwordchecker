@@ -12,7 +12,7 @@ def get_password_leaks_count(hashes, hash_to_check):
     for h, count in hashes:
         if h == hash_to_check:
             return count
-    return 0;
+    return 0
 
 def pwned_api_check(pass_list):
     hashed_psw = hashlib.sha1(pass_list.encode('utf-8')).hexdigest().upper()
